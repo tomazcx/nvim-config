@@ -22,12 +22,6 @@ return require('packer').startup(function(use)
 	use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
 	use ( 'duane9/nvim-rg' )
 	use {
-		'nvim-tree/nvim-tree.lua',
-		requires = {
-			'nvim-tree/nvim-web-devicons', -- optional
-		},
-	}
-	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
 		requires = {
