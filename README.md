@@ -12,3 +12,5 @@ List of extensions included (so far, probably not updated)
 - toggleterm
 - treesiter
 - packer (to manage all of it)
+- netrw.nvim
+- nvim-web-icons
