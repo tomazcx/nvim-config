@@ -9,6 +9,9 @@ require("toggleterm").setup{
     start_in_insert = true,
     persist_size = true,
     direction = 'float',
+    float_opts = {
+	    border = 'curved'
+    }
 }
 
 function _G.set_terminal_keymaps()
@@ -23,4 +26,4 @@ end
 
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
-vim.api.nvim_set_keymap("n", "<Space>t", "<cmd>ToggleTerm direction=tab<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<Space>t", "<cmd>ToggleTerm direction=float<CR>", {noremap = true, silent = true})
