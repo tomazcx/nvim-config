@@ -20,7 +20,6 @@ return require('packer').startup(function(use)
 		vim.cmd("colorscheme catppuccin")
 	end}
 	use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
-	use ( 'duane9/nvim-rg' )
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
