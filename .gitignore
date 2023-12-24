@@ -3,4 +3,4 @@ telescope_history
 .netrwhist
 mason
 rplugin.vim
-plugin
+plugin/packer_compiled.lua
