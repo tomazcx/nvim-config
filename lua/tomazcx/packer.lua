@@ -7,10 +7,9 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 	use 'feline-nvim/feline.nvim'
-
-
+	use 'mbbill/undotree'
 	use 'prichrd/netrw.nvim'
-	use 'nvim-tree/nvim-web-deviconse'
+	use 'nvim-tree/nvim-web-devicons'
 	use 'm4xshen/autoclose.nvim'
 	use {"akinsho/toggleterm.nvim", tag = '*' }
 	use {
@@ -23,6 +22,8 @@ return require('packer').startup(function(use)
 		vim.cmd("colorscheme catppuccin")
 	end}
 	use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
+
+	use { "folke/trouble.nvim" }
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
