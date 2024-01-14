@@ -11,33 +11,42 @@ return require('packer').startup(function(use)
 	use 'prichrd/netrw.nvim'
 	use 'nvim-tree/nvim-web-devicons'
 	use 'm4xshen/autoclose.nvim'
-	use {"akinsho/toggleterm.nvim", tag = '*' }
+	use 'windwp/nvim-ts-autotag'
+	use { "akinsho/toggleterm.nvim", tag = '*' }
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		-- or                            , branch = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
+		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
-
+	use {
+		'VonHeikemen/fine-cmdline.nvim',
+		requires = {
+			{ 'MunifTanjim/nui.nvim' }
+		}
+	}
 	use { "catppuccin/nvim", as = "catppuccin", config = function()
 		vim.cmd("colorscheme catppuccin")
-	end}
-	use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
-
+	end }
+	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+	use {
+		"m4xshen/hardtime.nvim",
+		requires ={ { "MunifTanjim/nui.nvim"} , { "nvim-lua/plenary.nvim" } },
+	}
 	use { "folke/trouble.nvim" }
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
 		requires = {
 			--- Uncomment these if you want to manage LSP servers from neovim
-			{'williamboman/mason.nvim'},
-			{'williamboman/mason-lspconfig.nvim'},
+			{ 'williamboman/mason.nvim' },
+			{ 'williamboman/mason-lspconfig.nvim' },
 
 			-- LSP Support
-			{'neovim/nvim-lspconfig'},
+			{ 'neovim/nvim-lspconfig' },
 			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},
-			{'hrsh7th/cmp-nvim-lsp'},
-			{'L3MON4D3/LuaSnip'},
+			{ 'hrsh7th/nvim-cmp' },
+			{ 'hrsh7th/cmp-nvim-lsp' },
+			{ 'L3MON4D3/LuaSnip' },
 		}
 	}
 end)
