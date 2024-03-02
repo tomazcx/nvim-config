@@ -6,8 +6,11 @@ require'nvim-treesitter.configs'.setup {
 		enable_rename = true,
 		enable_close = true,
 		enable_close_on_slash = true,
-		filetypes = { "templ", "html", "vue", "jsx"},
-	},
+		filetypes = {
+			'html', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'vue', 'tsx', 'jsx', 'rescript',
+			'css'
+		},
+    },
 
 	-- Install parsers synchronously (only applied to `ensure_installed`)
 	sync_install = false,

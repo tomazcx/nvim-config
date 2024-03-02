@@ -1,4 +1,5 @@
 local lsp_zero = require('lsp-zero')
+local lspconfig = require("lspconfig")
 local cmp = require("cmp")
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 cmp.setup({
@@ -16,7 +17,7 @@ lsp_zero.on_attach(function(client, bufnr)
 	lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-require("lspconfig").gopls.setup({
+lspconfig.gopls.setup({
 	settings =  {
 		gopls = {
 			completeUnimported = true

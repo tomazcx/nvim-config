@@ -7,6 +7,15 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 	use {
+		"pmizio/typescript-tools.nvim",
+		requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+	}
+	use({
+		"L3MON4D3/LuaSnip",
+		tag = "v2.*",
+		run = "make install_jsregexp"
+	})
+	use {
 		'nvim-lualine/lualine.nvim',
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	}
