@@ -31,6 +31,9 @@ return require('packer').startup(function(use)
 	use 'nvim-tree/nvim-web-devicons'
 	use 'm4xshen/autoclose.nvim'
 	use 'windwp/nvim-ts-autotag'
+	use('neovim/nvim-lspconfig')
+	use('jose-elias-alvarez/null-ls.nvim')
+	use('MunifTanjim/prettier.nvim')
 	use { "akinsho/toggleterm.nvim", tag = '*' }
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
