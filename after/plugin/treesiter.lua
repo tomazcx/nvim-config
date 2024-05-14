@@ -7,7 +7,7 @@ require'nvim-treesitter.configs'.setup {
 		enable_close = true,
 		enable_close_on_slash = true,
 		filetypes = {
-			'html', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'vue', 'tsx', 'jsx', 'rescript',
+			'html', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'vue', 'tsx', 'jsx', 'rescript', 'python',
 			'css'
 		},
     },
